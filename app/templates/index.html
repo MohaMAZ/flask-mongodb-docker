@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+
+    <!-- Include some basic styles for improved UI -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 5px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to Kaisens</h1>
+
+    <!-- Add buttons to trigger clean and analyse functions -->
+    <button onclick="redirectTo('/clean')">Clean</button>
+    <button onclick="redirectTo('/analyse')">Analyse</button>
+    <button onclick="redirectTo('/insert')">Save</button>
+
+    <!-- Include JavaScript to redirect to a specific URL -->
+    <script>
+        function redirectTo(url) {
+            // Redirect to the specified URL
+            window.location.href = url;
+        }
+    </script>
+
+</body>
+</html>

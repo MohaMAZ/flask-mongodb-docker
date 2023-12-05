@@ -1,0 +1,21 @@
+version: '3'
+services:
+  web:
+    build: ./app
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    depends_on:
+      - mongo
+  mongo:
+      image: mongo:latest
+      restart: always
+      # environment:
+      #     MONGO_INITDB_ROOT_USERNAME: kaisens
+      #     MONGO_INITDB_ROOT_PASSWORD: kaisens
+      #     MONGO_INITDB_DATABASE: database
+      ports:
+          - 27017:27017
+      # volumes:
+      #     - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
